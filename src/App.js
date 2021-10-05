@@ -1,8 +1,8 @@
-import './App.css';
+import React from 'react';
+
 import Config from './system.json';
 
 function App() {
-  
   var raw = JSON.stringify({
     url_enpoint: Config.CONFIG1.LINE_MESSAGE_MULTICAST_URL,
     user_id: Config.CONFIG1.LINE_USER_ID,
@@ -23,6 +23,7 @@ function App() {
       .then((response) => console.log(response.status))
       .catch((error) => console.log('error', error));
   };
+
   return (
     <div className='App'>
       <button onClick={postMessage}>POST</button>

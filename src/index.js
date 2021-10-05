@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import FileUploadPage from './FileUploadPage';
 import reportWebVitals from './reportWebVitals';
+import UploadImage from './uploadImage';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <UploadImage />
+    <FileUploadPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );

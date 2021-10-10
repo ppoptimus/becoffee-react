@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
 import ImageUploading from 'react-images-uploading';
 
 export default function UploadImage() {
@@ -9,7 +8,6 @@ export default function UploadImage() {
   const onChange = (imageList, addUpdateIndex) => {
     console.log(imageList, addUpdateIndex);
     setImages(imageList);
-    console.log(_basedir)
   };
   return (
     <div>

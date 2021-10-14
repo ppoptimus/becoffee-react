@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Image } from 'cloudinary-react'
 import './Orders.css'
+import Config from './system.json';
 
 export default function Orders() {
   let [coffeeCount, setCoffeeCount] = useState(0)
@@ -97,10 +98,11 @@ export default function Orders() {
         },
       })
       .then((res) => {
-        console.log(res)
+        console.log('postsheet ' + res)
+        postToLine(obj)
       })
       .catch((err) => {
-        console.log(err)
+        console.log('postsheet ' + err)
       })
   }
 
@@ -118,8 +120,32 @@ export default function Orders() {
         console.log(res.data.url)
       })
       .catch((err) => {
-        console.log(err)
+        console.log('upload image ' + err)
       })
+  }
+
+  const postToLine = (obj) => {
+    var raw = JSON.stringify({
+      url_enpoint: Config.CONFIG1.LINE_MESSAGE_MULTICAST_URL,
+      user_id: Config.CONFIG1.LINE_USER_ID,
+      message: obj,
+      originalContentUrl: imageUrl,
+      previewImageUrl: imageUrl,
+    });
+  
+    var requestOptions = {
+      method: 'POST',
+      headers: Config.CONFIG1.LINE_MESSAGE_HEADER,
+      body: raw,
+      redirect: 'follow',
+    };
+  
+console.log(requestOptions)
+
+      fetch('https://becoffee-node.herokuapp.com/multicast', requestOptions)
+        .then((response) => console.log('post to line ' + response.status))
+        .catch((error) => console.log('post to line', error));
+ 
   }
 
   return (
@@ -236,12 +262,16 @@ export default function Orders() {
                     <li className='list-group-item d-flex justify-content-between align-items-center'>{'เลขที่บัญชี : 075-035-3872'}</li>
                   </ul>
 
+                <div className='container'>
+
                   <label htmlFor='file-upload' className='custom-file-upload'>
                     เมื่อโอนเงินแล้ว คลิกเพื่ออัพโหลดสลิปที่นี่
                   </label>
 
                   <input id='file-upload' className='form-control w-50 bg-body' type='file' name='upload_image' onChange={uploadImage} />
+                </div>
 
+                  {/* {imageUrl !== '' ? () : ''} */}
                   <Image className='img-fluid m-1' cloudName='pumpo' publicId={imageUrl} width='320' crop='scale'></Image>
                 </div>
               ) : (

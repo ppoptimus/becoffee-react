@@ -1,12 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-// import App from './App'
-import Orders from './Orders';
+import React, { lazy, Suspense } from 'react'
+import { render } from 'react-dom'
+import OutsideAlerter from './Test';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+// import Orders from './Orders';
 
-ReactDOM.render(
+const Orders = lazy(() => import('./Orders'))
+
+render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Orders/>
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+      <Switch>
+        <Route path='/Orders' component={Orders} />
+      </Switch>
+      </Suspense>
+    </Router>
+    {/* <Orders/> */}
+    <OutsideAlerter />
   </React.StrictMode>,
   document.getElementById('root')
 )

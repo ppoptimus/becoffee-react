@@ -3,8 +3,8 @@
       "LINE_MESSAGE_MULTICAST_URL": "https://api.line.me/v2/bot/message/multicast",
       "LINE_MESSAGE_HEADER": {
         "Content-Type": "application/json",
-        "Authorization": "Bearer ngzLiVXA+gTsrTv7nQikkH2ZwJehhC2BUzDbiMJLiCckJ31GYoiIbIvjToe7w21cJQmMBry0P0wj7OvnqHb5LguCR7D5Fr8/+MokxuRZp5FDy/blsZHFn2tAVZ3WhFVdQTWxl1Hv7EcENwnpO6yONwdB04t89/1O/w1cDnyilFU="
+        "Authorization": "Bearer sTSOqtMpphdK5q/YhjVtn1w9jVAK9Bn7QsoaSapbToG2JQBeIR9seJuv4CtkNRLGpIJtTnsy9F+7uEjBv/3YOgDgiYtlZKRDYZuwOLO0J4I0sinhqiWIsp9Uiw7HNeWREX70PV2E27A7YqVvBz2OIgdB04t89/1O/w1cDnyilFU="
       },
-      "LINE_USER_ID":["U37d3a5f0191f7ccc298979b769971f24", "Ud96f2fe9128fd857fe2958227533a5be"]
+      "LINE_USER_ID":["U6e1614ff8a93a29d3b109fb9983a1dd3", "U1226eab4e2ccd3a283afbf855a828927"]
     }
 }

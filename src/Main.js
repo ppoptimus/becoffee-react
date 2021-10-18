@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { lazy } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+
+const Footer = lazy(() => import('./Footer'))
 
 export default function Main() {
  
@@ -55,6 +57,7 @@ export default function Main() {
           <img src='img/promote1.jpg' className='img-fluid col-12 mt-2' width='50%' height='auto' alt='เครื่องดื่มลดน้ำหนัก' />
         </div>
       </div>
+      <Footer/>
       <div className='container fixed-bottom flex mb-2'>
         <div className='row justify-content-center col-12'>
           <div className='col-8'>

@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Grid container */}
         <div className='container p-4'>
           {/* Section: Iframe */}
-          <section className>
+          {/* <section className>
             <div className='row d-flex justify-content-center'>
               <div className='col-lg-6'>
                 <div className='ratio ratio-16x9'>
@@ -23,7 +23,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* Section: Iframe */}
         </div>
         {/* Grid container */}

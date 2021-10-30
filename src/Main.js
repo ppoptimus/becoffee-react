@@ -62,7 +62,7 @@ export default function Main() {
         <div className='row justify-content-center col-12'>
           <div className='col-8'>
             <Link to='/Orders'>
-              <button className='btn btn-lg btn-primary bg-gradient py-3 mx-1 btnfixed w-100'>
+              <button className='btn btn-lg btn-warning bg-gradient py-3 mx-1 btnfixed w-100'>
                 <FontAwesomeIcon icon={faShoppingBasket} />
                 &nbsp;สั่งซื้อสินค้า
               </button>

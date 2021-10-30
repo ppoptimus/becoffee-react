@@ -359,9 +359,9 @@ export default function Orders() {
 											ยอดเงินที่ต้องชำระทันที
 											<span className='badge bg-primary rounded-pill fs-6'>{formatting(netPrice)}</span>
 										</li>
-										<li className='list-group-item d-flex justify-content-between align-items-center'>{"ธนาคาร ไทยพาณิชย์ (SCB)"}</li>
+										<li className='list-group-item d-flex justify-content-between align-items-center'>{"ธนาคาร ซีไอเอ็มบี ไทย (CIMB)"}</li>
 										<li className='list-group-item d-flex justify-content-between align-items-center'>{"ชื่อบัญชี : ปรียาภรณ์ ชุมนุมราษฎ์"}</li>
-										<li className='list-group-item d-flex justify-content-between align-items-center'>{"เลขที่บัญชี : 075-035-3872"}</li>
+										<li className='list-group-item d-flex justify-content-between align-items-center'>{"เลขที่บัญชี : 701-215-7932"}</li>
 									</ul>
 
 									<div className='container'>
@@ -380,6 +380,7 @@ export default function Orders() {
 							)}
 						</div>
 					</div>
+          <hr />
 				</div>
 			) : (
 				""

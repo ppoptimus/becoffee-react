@@ -27,6 +27,7 @@ export default function Orders() {
 	let [paymentMethod, setPaymentMethod] = useState("")
 
 	let [isFinish, setIsFinish] = useState(false)
+	const [isClickConfirm, setisClickConfirm] = useState(false)
 
 	const onCoffeeChange = (e) => {
 		if (e.target.value < 0) {
@@ -96,6 +97,7 @@ export default function Orders() {
 	}
 
 	const postOrdersToSheet = async () => {
+		setisClickConfirm(true)
 		const today = new Date()
 		const orderId =
 			today.getUTCFullYear() +
@@ -423,7 +425,14 @@ export default function Orders() {
 							</button>
 							{isFinish ? (
 								<button type='button' className='btn btn-success' style={{ backgroundColor: "#1b8c2e" }} onClick={postOrdersToSheet}>
-									ยืนยันคำสั่งซื้อ
+									
+									{!isClickConfirm?'ยืนยันคำสั่งซื้อ':(
+										<div>
+										<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />
+										<span>กำลังส่ง...</span>
+									  </div>
+									  
+									)}
 								</button>
 							) : (
 								""
@@ -441,5 +450,6 @@ const formatting = (x) => {
 }
 
 function refreshPage() {
+	window.scrollTo(0, 0)
 	window.location.reload(false)
 }

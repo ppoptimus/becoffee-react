@@ -50,7 +50,7 @@ export default function Main() {
           <img src='img/review1.jpg' className='img-fluid col-lg-6 col-sm-12' width='50%' height='auto' alt='เครื่องดื่มลดน้ำหนัก' />
           <img src='img/review2.jpg' className='img-fluid col-lg-6 col-sm-12' width='50%' height='auto' alt='เครื่องดื่มลดน้ำหนัก' />
           <div className='float-right my-3'>
-            <a href='https://www.facebook.com/nangbbeasycoffee'>
+            <a href='https://www.facebook.com/nangbecoffee'>
               <span className='btn btn-dark h6 fw-bold'>ดูรีวิวเพิ่มเติม &gt;&gt;</span>
             </a>
           </div>

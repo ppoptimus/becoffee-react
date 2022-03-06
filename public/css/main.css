@@ -1,0 +1,15 @@
+
+.line-button {
+    position: fixed;
+    bottom: 80px;
+    z-index: 99;
+    right: 10px;
+    width: 50px;
+  }
+  .facebook-button {
+    position: fixed;
+    bottom: 135px;
+    z-index: 99;
+    right: 10px;
+    width: 50px;
+  }

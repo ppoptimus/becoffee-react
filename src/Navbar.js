@@ -6,7 +6,7 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 export default function Navbar() {
   return (
     <>
-      <nav className='navbar navbar-expand-lg navbar-dark bg-dark p-0'>
+       <nav className='navbar navbar-expand-lg navbar-dark bg-dark p-0'>
         <div className='container-fluid'>
           <Link className='nav-link' to='/'>
             <img src='/img/logo.webp' className='img-fluid' width={120} alt='กาแฟควบคุมน้ำหนัก' />

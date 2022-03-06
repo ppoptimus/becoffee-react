@@ -389,10 +389,11 @@ export default function Orders() {
 			{!isValid && isFinish ? (
 				<div className='text-end my-1'>
 					<button
-						className='btn btn-warning py-lg-3 px-lg-5 px-md-4 px-sm-1 w-100'
+						className='btn btn-warning py-3 px-lg-5 px-md-4 px-sm-1 w-100 text-xxl-center'
 						data-bs-toggle='modal'
 						data-bs-target='#confirmOrder'
-						onClick={confirming}>
+						onClick={confirming}
+						style={{fontSize:'larger', fontWeight:'bolder', backgroundColor:'#fb4a00'}}>
 						ตรวจสอบคำสั่งซื้อ
 					</button>
 				</div>

@@ -352,6 +352,7 @@ export default function Orders() {
 									<input type='radio' className='form-check-input' name='optionsRadios' onClick={onRadioTransferClick} />
 									{"ชำระเงินทันที (กรุณาอัพโหลดสลิป)"}
 								</label>
+								<p className="fs-6"><i>*สั่งซื้อเกินกว่า 3 ชิ้น กรุณาชำระเงินทันที</i></p>
 							</div>
 
 							{isPaynow ? (

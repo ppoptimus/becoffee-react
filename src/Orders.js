@@ -337,7 +337,7 @@ export default function Orders() {
 							</button>
 						</h2>
 						<div id='collapseTwo' className='accordion-collapse collapse' aria-labelledby='collapseTwo' data-bs-parent='#accordionTransfer'>
-							{!isUploaded ? (
+							{/* {!isUploaded ? (
 								<div className='form-check mt-2'>
 									<label className='form-check-label'>
 										<input type='radio' className='form-check-input' name='optionsRadios' onClick={onRadioCADClick} />
@@ -346,13 +346,13 @@ export default function Orders() {
 								</div>
 							) : (
 								""
-							)}
+							)} */}
 							<div className='form-check'>
 								<label className='form-check-label'>
 									<input type='radio' className='form-check-input' name='optionsRadios' onClick={onRadioTransferClick} />
 									{"ชำระเงินทันที (กรุณาอัพโหลดสลิป)"}
 								</label>
-								<p className="fs-6"><i>*สั่งซื้อเกินกว่า 3 ชิ้น กรุณาชำระเงินทันที</i></p>
+								<p className="fs-6"><i>** หากต้องการชำระเงินปลายทาง กรุณาติดต่อช่องทางไลน์ Official</i></p>
 							</div>
 
 							{isPaynow ? (
